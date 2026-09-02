@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>鱼鸢网络 - 用科技节约您的每一分钟</title>
+    <meta name="description" content="鱼鸢网络是一家新兴的互联网科技公司，主营业务包括编程教育、创新产品研发、科技自媒体等。我们的使命愿景是&quot;用科技节约您的每一分钟&quot;。">
+    <meta name="keywords" content="计算机,编程,程序员,求职,简历,java,开发,科技,自媒体,AI,鱼鸢网络,编程导航,面试鸭">
+    <meta name="author" content="鱼鸢网络">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.yuyuanweb.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yuyuanweb.com/">
+    <meta property="og:title" content="鱼鸢网络 - 用科技节约您的每一分钟">
+    <meta property="og:description"
+        content="鱼鸢网络是一家新兴的互联网科技公司，主营业务包括编程教育、创新产品研发、科技自媒体等。我们的使命愿景是&quot;用科技节约您的每一分钟&quot;。">
+    <meta property="og:image" content="https://yuyuanweb.com/images/common/logo.png">
+    <meta property="og:site_name" content="鱼鸢网络">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="icon" type="image/x-icon" href="https://yuyuanweb.com/favicon.ico">
+    <link rel="apple-touch-icon" href="https://yuyuanweb.com/images/common/logo.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp .8s ease-out forwards;
+        }
+
+        .delay-100 {
+            animation-delay: .1s;
+            opacity: 0;
+        }
+
+        .delay-200 {
+            animation-delay: .2s;
+            opacity: 0;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 滚动触发动画 */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-200 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-300 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-400 {
+            transition-delay: 0.4s;
+        }
+
+        .delay-500 {
+            transition-delay: 0.5s;
+        }
+
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom, 0);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col overflow-x-hidden">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 shadow-md" id="header">
+        <div class="max-w-[1200px] mx-auto px-4">
+            <div class="flex items-center justify-between h-[80px]">
+                <a href="index.html" class="flex items-center shrink-0">
+                    <img src="https://yuyuanweb.com/images/common/logo.png" alt="鱼鸢网络 - 用科技节约您的每一分钟"
+                        class="h-[40px] md:h-[57px] w-auto pl-2 md:pl-4">
+                </a>
+                <nav class="hidden md:flex items-center">
+                    <ul class="flex items-center h-[46px]">
+                        <li class="h-full">
+                            <a href="index.html"
+                                class="block w-[125px] h-[46px] leading-[44px] text-center mx-[10px] md:mx-[20px] lg:mx-[36px] text-[16px] font-bold transition-all duration-300 border-b-2 hover:text-[#0065dd] hover:border-[#0065dd] text-[#0065dd] border-[#0065dd]">
+                                首页
+                            </a>
+                        </li>
+                        <li class="h-full">
+                            <a href="about.html"
+                                class="block w-[125px] h-[46px] leading-[44px] text-center mx-[10px] md:mx-[20px] lg:mx-[36px] text-[16px] font-bold transition-all duration-300 border-b-2 hover:text-[#0065dd] hover:border-[#0065dd] text-[#17233d] border-transparent">
+                                关于我们
+                            </a>
+                        </li>
+                        <li class="h-full">
+                            <a href="products.html"
+                                class="block w-[125px] h-[46px] leading-[44px] text-center mx-[10px] md:mx-[20px] lg:mx-[36px] text-[16px] font-bold transition-all duration-300 border-b-2 hover:text-[#0065dd] hover:border-[#0065dd] text-[#17233d] border-transparent">
+                                产品服务
+                            </a>
+                        </li>
+                        <li class="h-full">
+                            <a href="join.html"
+                                class="block w-[125px] h-[46px] leading-[44px] text-center mx-[10px] md:mx-[20px] lg:mx-[36px] text-[16px] font-bold transition-all duration-300 border-b-2 hover:text-[#0065dd] hover:border-[#0065dd] text-[#17233d] border-transparent">
+                                加入我们
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="md:hidden ml-auto p-2 text-gray-700 hover:text-[#0065dd] transition-colors"
+                    id="mobile-menu-btn" aria-label="打开菜单">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <nav class="container mx-auto px-5 py-4 space-y-4">
+                <a href="index.html"
+                    class="block text-base font-bold transition-colors duration-300 hover:text-[#0065dd] text-[#0065dd]">
+                    首页
+                </a>
+                <a href="about.html"
+                    class="block text-base font-bold transition-colors duration-300 hover:text-[#0065dd] text-[#17233d]">
+                    关于我们
+                </a>
+                <a href="products.html"
+                    class="block text-base font-bold transition-colors duration-300 hover:text-[#0065dd] text-[#17233d]">
+                    产品服务
+                </a>
+                <a href="join.html"
+                    class="block text-base font-bold transition-colors duration-300 hover:text-[#0065dd] text-[#17233d]">
+                    加入我们
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn?.addEventListener('click', function () {
+            mobileMenu?.classList.toggle('hidden');
+        });
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function () {
+            window.scrollY > 100 ? header?.classList.add('shadow-md') : header?.classList.remove('shadow-md');
+        });
+    </script>
+
+    <main class="flex-1 mt-[80px]">
+        <!-- Hero -->
+        <section class="relative h-[500px] md:h-[650px] lg:h-[820px] overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="https://yuyuanweb.com/images/home/hero-banner.webp" alt="More Tech, More Efficiency"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+            </div>
+            <div class="relative max-w-[1200px] mx-auto px-5 h-full flex items-center">
+                <div class="max-w-[800px] text-white pt-10 md:pt-20">
+                    <h1 class="text-[28px] md:text-[48px] lg:text-[72px] font-bold leading-[1.3] md:leading-[1.5] mb-3 md:mb-4 animate-fade-in-up"
+                        style="text-shadow: 2px 2px 8px #191919;">
+                        用科技节约您的每一分钟
+                    </h1>
+                    <p
+                        class="text-[14px] md:text-[18px] lg:text-[24px] leading-[1.8] md:leading-[48px] font-normal text-white mb-6 md:mb-10 animate-fade-in-up delay-100">
+                        More Tech, More Efficiency
+                    </p>
+                    <a href="products.html"
+                        class="inline-flex items-center justify-center w-[140px] h-[44px] md:w-[188px] md:h-[56px] bg-[#0065dd] text-white text-[14px] md:text-[18px] hover:bg-[#0052b3] transition-colors duration-300 animate-fade-in-up delay-200">
+                        了解我们
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我们 -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-on-scroll is-visible">
+                        <div class="mb-8 md:mb-10 relative">
+                            <div
+                                class="absolute z-[3] w-[60px] h-[65px] md:w-[106px] md:h-[110px] top-[-15px] left-[-15px] md:top-[-32px] md:left-[-32px] pointer-events-none overflow-hidden">
+                                <img src="https://yuyuanweb.com/images/common/decoration.png" alt="装饰"
+                                    class="w-auto h-full relative left-1/2 -translate-x-1/2 box-border block">
+                            </div>
+                            <div class="relative z-10 inline-flex items-center">
+                                <h2
+                                    class="text-[24px] md:text-[36px] lg:text-[48px] font-bold leading-tight text-[#333]">
+                                    关于我们
+                                    <span
+                                        class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-[24px] font-normal text-[#999]">About
+                                        us</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <p class="text-[#666] leading-relaxed mb-8 text-[15px]">
+                            鱼鸢网络是一家以编程教育和 AI 知识科普为核心的新兴互联网科技公司，已形成集编程学习平台、AI 工具与资源导航、自研效率产品、AI
+                            科技自媒体于一体的产品矩阵。我们始终坚持「用科技节约您的每一分钟」，希望通过更好用的产品与更有价值的内容，让技术学习更高效，让信息获取更有价值。
+                        </p>
+                        <a href="about.html"
+                            class="inline-flex items-center px-6 py-2 border border-[#ccc] text-[#666] text-sm hover:border-[#0065dd] hover:text-[#0065dd] transition-all duration-300 rounded">
+                            查看更多
+                        </a>
+                    </div>
+                    <div class="animate-on-scroll delay-200 is-visible">
+                        <div class="relative">
+                            <img src="https://yuyuanweb.com/images/about/company-bud.webp" alt="关于我们"
+                                class="w-full rounded-lg" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 业务领域 -->
+        <section class="py-16 md:py-20 bg-[#f6f7f9]">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <div class="animate-on-scroll">
+                    <div class="mb-8 md:mb-10 relative">
+                        <div
+                            class="absolute z-[3] w-[60px] h-[65px] md:w-[106px] md:h-[110px] top-[-15px] left-[-15px] md:top-[-32px] md:left-[-32px] pointer-events-none overflow-hidden">
+                            <img src="https://yuyuanweb.com/images/common/decoration.png" alt="装饰"
+                                class="w-auto h-full relative left-1/2 -translate-x-1/2 box-border block">
+                        </div>
+                        <div class="relative z-10 inline-flex items-center">
+                            <h2 class="text-[24px] md:text-[36px] lg:text-[48px] font-bold leading-tight text-[#333]">
+                                业务领域
+                                <span
+                                    class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-[24px] font-normal text-[#999]">Business</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-8 mt-8">
+                    <a href="products.html" class="group block animate-on-scroll delay-100">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg mb-4">
+                            <img src="https://yuyuanweb.com/images/home/business-education.webp"
+                                alt="Programming Education"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy">
+                        </div>
+                        <div class="text-center">
+                            <h3
+                                class="text-base font-medium mb-1 text-[#333] group-hover:text-[#0065dd] transition-colors">
+                                编程教育</h3>
+                            <p class="text-sm text-[#999]">Programming Education</p>
+                        </div>
+                    </a>
+                    <a href="products.html" class="group block animate-on-scroll delay-200">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg mb-4">
+                            <img src="https://yuyuanweb.com/images/home/business-product.webp" alt="Innovative Product"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy">
+                        </div>
+                        <div class="text-center">
+                            <h3
+                                class="text-base font-medium mb-1 text-[#333] group-hover:text-[#0065dd] transition-colors">
+                                创新产品</h3>
+                            <p class="text-sm text-[#999]">Innovative Product</p>
+                        </div>
+                    </a>
+                    <a href="products.html" class="group block animate-on-scroll delay-300">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg mb-4">
+                            <img src="https://yuyuanweb.com/images/home/business-media.webp" alt="AI &amp; Tech Content"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy">
+                        </div>
+                        <div class="text-center">
+                            <h3
+                                class="text-base font-medium mb-1 text-[#333] group-hover:text-[#0065dd] transition-colors">
+                                AI 科技自媒体</h3>
+                            <p class="text-sm text-[#999]">AI &amp; Tech Content</p>
+                        </div>
+                    </a>
+                    <a href="products.html" class="group block animate-on-scroll delay-400">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg mb-4">
+                            <img src="https://yuyuanweb.com/images/home/business-ai-service.webp"
+                                alt="Corporate AI Services"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy">
+                        </div>
+                        <div class="text-center">
+                            <h3
+                                class="text-base font-medium mb-1 text-[#333] group-hover:text-[#0065dd] transition-colors">
+                                企业 AI 服务</h3>
+                            <p class="text-sm text-[#999]">Corporate AI Services</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品服务 -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <div class="animate-on-scroll">
+                    <div class="mb-8 md:mb-10 relative">
+                        <div
+                            class="absolute z-[3] w-[60px] h-[65px] md:w-[106px] md:h-[110px] top-[-15px] left-[-15px] md:top-[-32px] md:left-[-32px] pointer-events-none overflow-hidden">
+                            <img src="https://yuyuanweb.com/images/common/decoration.png" alt="装饰"
+                                class="w-auto h-full relative left-1/2 -translate-x-1/2 box-border block">
+                        </div>
+                        <div class="relative z-10 inline-flex items-center">
+                            <h2 class="text-[24px] md:text-[36px] lg:text-[48px] font-bold leading-tight text-[#333]">
+                                产品服务
+                                <span
+                                    class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-[24px] font-normal text-[#999]">works</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mt-8">
+                    <!-- 产品卡片：编程导航 -->
+                    <div class="animate-on-scroll delay-100">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/codefather.webp"
+                                        alt="一站式编程学习网站，数十万编程爱好者的选择"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">编程导航</h3>
+                                <p class="text-sm text-[#999] mb-2">一站式编程学习网站，数十万编程爱好者的选择</p>
+                                <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 老鱼简历 -->
+                    <div class="animate-on-scroll delay-200">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://laoyujianli.com/" target="_blank" rel="noopener noreferrer" class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/laoyujianli.webp"
+                                        alt="1 分钟生成精美的个人简历，求职必备"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">老鱼简历</h3>
+                                <p class="text-sm text-[#999] mb-2">1 分钟生成精美的个人简历，求职必备</p>
+                                <a href="https://laoyujianli.com/" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 面试鸭 -->
+                    <div class="animate-on-scroll delay-300">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://www.mianshiya.com/" target="_blank" rel="noopener noreferrer"
+                                class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/mianshiya.webp"
+                                        alt="1万+高频面试真题，帮你拿 offer"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">面试鸭</h3>
+                                <p class="text-sm text-[#999] mb-2">1万+高频面试真题，帮你拿 offer</p>
+                                <a href="https://www.mianshiya.com/" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 面多多 -->
+                    <div class="animate-on-scroll delay-400">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://ai.mianshiya.com/" target="_blank" rel="noopener noreferrer" class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/mianduoduo.webp"
+                                        alt="1 对 1 模拟面试，24 小时随时开启面试提升"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">面多多</h3>
+                                <p class="text-sm text-[#999] mb-2">1 对 1 模拟面试，24 小时随时开启面试提升</p>
+                                <a href="https://ai.mianshiya.com/" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI 导航 -->
+                    <div class="animate-on-scroll delay-500">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://ai.codefather.cn/" target="_blank" rel="noopener noreferrer" class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/ai-nav.webp"
+                                        alt="AI 资源大全，你想要的关于 AI 的一切都在这里"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">AI 导航</h3>
+                                <p class="text-sm text-[#999] mb-2">AI 资源大全，你想要的关于 AI 的一切都在这里</p>
+                                <a href="https://ai.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 算法导航 -->
+                    <div class="animate-on-scroll delay-500">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://algo.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/algo-nav.webp" alt="动画学算法，保姆级算法学习路线"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">算法导航</h3>
+                                <p class="text-sm text-[#999] mb-2">动画学算法，保姆级算法学习路线</p>
+                                <a href="https://algo.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 剪切助手 -->
+                    <div class="animate-on-scroll delay-500">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://jianqiezhushou.com/" target="_blank" rel="noopener noreferrer"
+                                class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/jianqie.webp"
+                                        alt="轻松管理文本复制粘贴，提高工作效率的神器"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">剪切助手</h3>
+                                <p class="text-sm text-[#999] mb-2">轻松管理文本复制粘贴，提高工作效率的神器</p>
+                                <a href="https://jianqiezhushou.com/" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 企业 AI 服务 -->
+                    <div class="animate-on-scroll delay-500">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://work.weixin.qq.com/kfid/kfc2ebf2f54cd0656e6" target="_blank"
+                                rel="noopener noreferrer" class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/corporate-ai.webp"
+                                        alt="企业 AI 内训、落地咨询与技术分享，把 AI 真正用起来"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">企业 AI 服务</h3>
+                                <p class="text-sm text-[#999] mb-2">企业 AI 内训、落地咨询与技术分享，把 AI 真正用起来</p>
+                                <a href="https://work.weixin.qq.com/kfid/kfc2ebf2f54cd0656e6" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI & 编程自媒体 -->
+                    <div class="animate-on-scroll delay-500">
+                        <div class="group transition-shadow duration-300 hover:shadow-lg">
+                            <a href="https://pic.code-nav.cn/post_picture/1730577019852419074/svufOkH3KPxOKRNg.webp"
+                                target="_blank" rel="noopener noreferrer" class="block">
+                                <div class="aspect-4/3 overflow-hidden">
+                                    <img src="https://yuyuanweb.com/images/products/media_cover.webp"
+                                        alt="AI 和编程干货分享，全网关注超 200 万"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy">
+                                </div>
+                            </a>
+                            <div class="py-4 text-center bg-[#f6f7f9]">
+                                <h3 class="text-base font-medium text-[#0065dd] mb-1">AI &amp; 编程自媒体</h3>
+                                <p class="text-sm text-[#999] mb-2">AI 和编程干货分享，全网关注超 200 万</p>
+                                <a href="https://pic.code-nav.cn/post_picture/1730577019852419074/svufOkH3KPxOKRNg.webp"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="inline-block text-sm text-[#0065dd] hover:underline">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12 animate-on-scroll">
+                    <a href="products.html"
+                        class="inline-flex items-center px-8 py-2 border border-[#ccc] text-[#666] text-sm hover:border-[#0065dd] hover:text-[#0065dd] transition-all duration-300 rounded">
+                        查看更多
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#353540] text-white">
+        <div class="max-w-[1200px] mx-auto px-5 py-12">
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-base font-bold mb-5 text-white">关于我们</h4>
+                        <ul class="space-y-3">
+                            <li><a href="about.html"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">关于我们</a>
+                            </li>
+                            <li><a href="join.html"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">加入我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold mb-5 text-white">产品服务</h4>
+                        <ul class="space-y-3">
+                            <li><a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">编程导航</a>
+                            </li>
+                            <li><a href="https://www.laoyujianli.com/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">老鱼简历</a>
+                            </li>
+                            <li><a href="https://www.mianshiya.com/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">面试鸭</a>
+                            </li>
+                            <li><a href="https://ai.mianshiya.com/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">面多多</a>
+                            </li>
+                            <li><a href="https://ai.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">AI
+                                    导航</a></li>
+                            <li><a href="https://algo.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">算法导航</a>
+                            </li>
+                            <li><a href="https://jianqiezhushou.com/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">剪切助手</a>
+                            </li>
+                            <li><a href="https://work.weixin.qq.com/kfid/kfc2ebf2f54cd0656e6" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">企业 AI
+                                    服务</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold mb-5 text-white">联系我们</h4>
+                        <ul class="space-y-3">
+                            <li><a href="https://yuyuanweb.feishu.cn/wiki/AOzgw1mOliX6SskAVEicK6u7nDA" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">商务合作</a>
+                            </li>
+                            <li><span class="text-[#999] text-sm">微信公众号：程序员鱼皮</span></li>
+                            <li><a href="https://space.bilibili.com/12890453/" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">B
+                                    站：程序员鱼皮</a></li>
+                            <li><span class="text-[#999] text-sm">知乎：程序员鱼皮</span></li>
+                            <li><a href="mailto:yupi@yuyuanweb.com"
+                                    class="text-[#999] hover:text-white transition-colors duration-300 text-sm">邮箱：yupi@yuyuanweb.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center shrink-0">
+                    <img src="https://yuyuanweb.com/images/common/qrcode.jpg" alt="程序员鱼皮公众号二维码" class="w-40 h-40 mb-2">
+                    <span class="text-[#999] text-sm">微信公众号</span>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-[#4a4a52]">
+            <div class="max-w-[1200px] mx-auto px-5 py-4">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-center text-center text-[#999] text-sm space-y-2 md:space-y-0 flex-wrap gap-y-2">
+                    <span>Copyright @ 2023 上海鱼鸢网络技术有限公司 All rights reserved.</span>
+                    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer"
+                        class="md:ml-4 hover:text-white transition-colors duration-300">沪ICP备19026706号-13</a>
+                    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=31010602009599" target="_blank"
+                        rel="noreferrer"
+                        class="md:ml-4 hover:text-white transition-colors duration-300 inline-flex items-center gap-1">
+                        <img src="https://yuyuanweb.com/police.png" alt="公安备案" class="w-4 h-4">
+                        沪公网安备31010602009599号
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 侧边悬浮 -->
+    <div class="hidden md:block fixed right-0 top-1/2 -translate-y-1/2 z-50">
+        <ul class="flex flex-col m-0 p-0 list-none">
+            <li class="relative group mb-1">
+                <div class="w-[52px] h-[52px] cursor-pointer bg-[#353535] overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center overflow-hidden box-border text-[0px]">
+                        <img class="w-full h-[22px] object-contain block border-0"
+                            src="https://yuyuanweb.com/images/common/suspension-code.png" alt="微信">
+                    </div>
+                </div>
+                <div
+                    class="absolute right-[calc(100%+20px)] top-0 hidden group-hover:block w-[223px] bg-white text-center shadow-[0px_0px_10px_rgba(0,0,0,0.2)] p-[8px_22px] box-border">
+                    <div class="flex flex-col items-center w-full">
+                        <img class="w-full h-auto block" src="https://yuyuanweb.com/images/common/qrcode.jpg"
+                            alt="关注我们">
+                        <div class="mt-2 text-center w-full">
+                            <span class="text-[14px] text-[#333] leading-none">关注我们</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="w-[52px] h-[52px] transition-all duration-300 mb-1 opacity-100 visible" id="scroll-top-btn">
+                <div class="w-full h-full cursor-pointer bg-[#353535] overflow-hidden">
+                    <a href="javascript:;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                        class="block w-full h-full">
+                        <div
+                            class="w-full h-full flex items-center justify-center overflow-hidden box-border text-[0px]">
+                            <img class="w-full h-[22px] object-contain block border-0"
+                                src="https://yuyuanweb.com/images/common/suspension-up.png" alt="顶部">
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // 回到顶部按钮显隐
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        function toggleScrollBtn() {
+            if (window.scrollY > 300) {
+                scrollTopBtn?.classList.remove('opacity-0', 'invisible');
+                scrollTopBtn?.classList.add('opacity-100', 'visible');
+            } else {
+                scrollTopBtn?.classList.add('opacity-0', 'invisible');
+                scrollTopBtn?.classList.remove('opacity-100', 'visible');
+            }
+        }
+        window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+
+        // 滚动触发动画 (Intersection Observer)
+        const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".animate-on-scroll").forEach(function (el) {
+                observer.observe(el);
+            });
+        });
+
+        window.scrollToTop = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+
+    <!-- 移动端 TabBar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 md:hidden safe-area-bottom">
+        <ul class="flex justify-around items-center h-14">
+            <li class="flex-1">
+                <a href="index.html"
+                    class="flex flex-col items-center justify-center h-full py-1 transition-colors duration-200 text-[#0065dd]">
+                    <div class="w-6 h-6 mb-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <span class="text-xs">首页</span>
+                </a>
+            </li>
+            <li class="flex-1">
+                <a href="about.html"
+                    class="flex flex-col items-center justify-center h-full py-1 transition-colors duration-200 text-[#666] hover:text-[#0065dd]">
+                    <div class="w-6 h-6 mb-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                            <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                            <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                            <path d="M10 6h4"></path>
+                            <path d="M10 10h4"></path>
+                            <path d="M10 14h4"></path>
+                            <path d="M10 18h4"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs">关于我们</span>
+                </a>
+            </li>
+            <li class="flex-1">
+                <a href="products.html"
+                    class="flex flex-col items-center justify-center h-full py-1 transition-colors duration-200 text-[#666] hover:text-[#0065dd]">
+                    <div class="w-6 h-6 mb-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m7.5 4.27 9 5.15"></path>
+                            <path
+                                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z">
+                            </path>
+                            <path d="m3.3 7 8.7 5 8.7-5"></path>
+                            <path d="M12 22V12"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs">产品服务</span>
+                </a>
+            </li>
+            <li class="flex-1">
+                <a href="join.html"
+                    class="flex flex-col items-center justify-center h-full py-1 transition-colors duration-200 text-[#666] hover:text-[#0065dd]">
+                    <div class="w-6 h-6 mb-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs">加入我们</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="h-14 md:hidden"></div>
+
+</body>
+
+</html>
