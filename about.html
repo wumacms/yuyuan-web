@@ -120,67 +120,78 @@
     <!-- ============================================================
     HEADER
     ============================================================ -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 shadow-md" id="header">
+    <!-- ============================================================
+    HEADER
+    ============================================================ -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-slate-200/80 shadow-sm" id="header">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center shrink-0 gap-2.5 pl-2 md:pl-4">
+                <a href="index.html" class="flex items-center shrink-0 gap-3 pl-2 md:pl-4">
                     <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=120&q=80"
-                        alt="鱼鸢网络" class="h-10 w-10 md:h-12 md:w-12 rounded-xl object-cover shadow-sm">
-                    <span class="text-xl md:text-2xl font-bold tracking-tight text-slate-900">鱼鸢网络</span>
+                        alt="鱼鸢网络" class="h-10 w-10 md:h-11 md:w-11 rounded-xl object-cover ring-2 ring-blue-500/20 shadow-sm">
+                    <div class="flex flex-col">
+                        <span class="text-xl md:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">鱼鸢网络</span>
+                        <span class="text-xs text-slate-400 font-medium tracking-wider mt-0.5">YUYUAN NETWORK</span>
+                    </div>
                 </a>
                 <nav class="hidden md:flex items-center">
-                    <ul class="flex items-center h-11">
-                        <li class="h-full">
+                    <ul class="flex items-center gap-1">
+                        <li>
                             <a href="index.html"
-                                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-slate-900 border-transparent">
+                                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-blue-600 hover:bg-slate-50">
                                 首页
                             </a>
                         </li>
-                        <li class="h-full">
+                        <li>
                             <a href="about.html"
-                                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-blue-600 border-blue-600">
+                                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-blue-600 bg-blue-50/80">
                                 关于我们
                             </a>
                         </li>
-                        <li class="h-full">
+                        <li>
                             <a href="products.html"
-                                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-slate-900 border-transparent">
+                                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-blue-600 hover:bg-slate-50">
                                 产品服务
                             </a>
                         </li>
-                        <li class="h-full">
+                        <li>
                             <a href="join.html"
-                                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-slate-900 border-transparent">
+                                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-blue-600 hover:bg-slate-50">
                                 加入我们
                             </a>
                         </li>
                     </ul>
                 </nav>
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm shadow-blue-500/20">
+                        <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                        <span>进入编程导航</span>
+                    </a>
+                </div>
                 <button class="md:hidden ml-auto p-2 text-gray-700 hover:text-blue-600 transition-colors"
                     id="mobile-menu-btn" aria-label="打开菜单">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
-        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
-            <nav class="container mx-auto px-5 py-4 space-y-4">
-                <a href="index.html"
-                    class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-slate-900">
-                    首页
-                </a>
-                <a href="about.html"
-                    class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-blue-600">
-                    关于我们
-                </a>
-                <a href="products.html"
-                    class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-slate-900">
-                    产品服务
-                </a>
-                <a href="join.html"
-                    class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-slate-900">
-                    加入我们
-                </a>
-            </nav>
+        <div class="md:hidden hidden bg-white border-t border-slate-200 px-5 py-4 space-y-2" id="mobile-menu">
+            <a href="index.html"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50">
+                首页
+            </a>
+            <a href="about.html"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-blue-600 bg-blue-50">
+                关于我们
+            </a>
+            <a href="products.html"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50">
+                产品服务
+            </a>
+            <a href="join.html"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50">
+                加入我们
+            </a>
         </div>
     </header>
 
@@ -192,7 +203,7 @@
         });
         const header = document.getElementById('header');
         window.addEventListener('scroll', function () {
-            window.scrollY > 100 ? header?.classList.add('shadow-md') : header?.classList.remove('shadow-md');
+            window.scrollY > 50 ? header?.classList.add('shadow-md') : header?.classList.remove('shadow-md');
         });
     </script>
 
@@ -204,16 +215,26 @@
         <!-- ==========================================================
         PAGE BANNER
         ========================================================== -->
-        <section class="relative overflow-hidden bg-neutral-900 h-72 md:h-96">
+        <section class="relative overflow-hidden bg-slate-950 py-20 md:py-28">
             <div class="absolute inset-0">
                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80"
-                    alt="关于我们" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-neutral-950/40"></div>
+                    alt="关于我们" class="w-full h-full object-cover opacity-50 md:opacity-65">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/30"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/70"></div>
             </div>
-            <div class="relative max-w-6xl mx-auto px-5 h-full flex items-center">
-                <div class="text-white">
-                    <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-2 drop-shadow-md">关于我们</h1>
-                    <p class="text-sm md:text-lg text-gray-200 drop-shadow">致力于用科技创新节约您的每一分钟</p>
+            <div class="relative max-w-6xl mx-auto px-5">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        <span>关于鱼鸢 · 极客精神 · 创新驱动</span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                        用科技创新<br>
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">节约您的每一分钟</span>
+                    </h1>
+                    <p class="text-base md:text-xl text-slate-300 leading-relaxed max-w-2xl font-light">
+                        专注于编程教育、自研创新工具研发与 AI 科技生态建设，陪伴百万开发者跨越技术进阶之路。
+                    </p>
                 </div>
             </div>
         </section>
@@ -221,36 +242,56 @@
         <!-- ==========================================================
         关于我们（公司介绍）
         ========================================================== -->
-        <section class="py-16 md:py-20 bg-white">
+        <section class="py-20 md:py-28 bg-white">
             <div class="max-w-6xl mx-auto px-5">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="animate-on-scroll">
-                        <div class="mb-8 md:mb-10 relative">
-                            <div
-                                class="absolute -top-4 -left-4 md:-top-7 md:-left-7 pointer-events-none text-blue-500/20">
-                                <i data-lucide="sparkles" class="w-14 h-14 md:w-24 md:h-24"></i>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 animate-on-scroll">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
+                            <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                            <span>探索鱼鸢</span>
+                        </div>
+                        <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight mb-6">
+                            专注为开发者打造<br class="hidden sm:inline">高价值成长与效率生态
+                        </h2>
+                        <div class="space-y-4 text-slate-600 leading-relaxed text-base">
+                            <p>
+                                鱼鸢网络成立于 2023 年，是一家专注于编程教育、创新产品研发、AI 科技自媒体等领域的新兴互联网企业。我们始终秉承“用科技节约您的每一分钟”的使命，致力于通过极客思维与前沿技术解决信息差与学习痛点。
+                            </p>
+                            <p>
+                                旗下自研产品矩阵包括【编程导航】、【面试鸭】、【老鱼简历】、【面多多】、【AI 导航】等，为广大技术学习者与从业者提供系统化学习路线、高频面试题库、AI 智能模拟面试与效率工具链。全网累计服务与影响超 200 万技术爱好者与计算机从业人员。
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-slate-100">
+                            <div>
+                                <div class="text-2xl md:text-3xl font-extrabold text-blue-600">200W+</div>
+                                <div class="text-xs md:text-sm text-slate-500 mt-1">全网开发者关注</div>
                             </div>
-                            <div class="relative z-10 inline-flex items-center">
-                                <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
-                                    关于我们
-                                    <span
-                                        class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-2xl font-normal text-gray-400">About
-                                        us</span>
-                                </h2>
+                            <div>
+                                <div class="text-2xl md:text-3xl font-extrabold text-slate-900">1000+</div>
+                                <div class="text-xs md:text-sm text-slate-500 mt-1">独家系统实战</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl md:text-3xl font-extrabold text-slate-900">99.2%</div>
+                                <div class="text-xs md:text-sm text-slate-500 mt-1">学员满意口碑</div>
                             </div>
                         </div>
-                        <p class="text-gray-600 leading-relaxed mb-4 text-base">
-                            鱼鸢网络成立于2023年，是一家专注于编程教育、创新产品研发、AI 科技自媒体等领域的新兴互联网企业。
-                        </p>
-                        <p class="text-gray-600 leading-relaxed text-base">
-                            旗下自研产品编程导航、老鱼简历、面试鸭、AI 导航等为用户提供了一站式编程学习求职和交流平台、高效易用的技术工具和综合性 AI
-                            知识资源平台。持续输出编程知识、学习经验、AI 资讯与技术实践内容，持续迭代多款学习与效率工具，覆盖编程学习、项目实战、求职交流、AI
-                            资源整合等场景。
-                        </p>
                     </div>
-                    <div class="animate-on-scroll delay-200">
-                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80"
-                            alt="鱼鸢网络" class="w-full max-w-sm h-auto rounded-lg mx-auto shadow-md" loading="lazy">
+                    <div class="lg:col-span-5 animate-on-scroll delay-200">
+                        <div class="relative">
+                            <div class="overflow-hidden rounded-2xl shadow-xl border border-slate-100">
+                                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80"
+                                    alt="鱼鸢网络团队工作环境" class="w-full h-80 md:h-96 object-cover" loading="lazy">
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 hidden sm:flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900">创新驱动 · 极致实战</div>
+                                    <div class="text-xs text-slate-500">坚持长期主义的极客社区</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -259,113 +300,223 @@
         <!-- ==========================================================
         使命和愿景
         ========================================================== -->
-        <section class="py-16 md:py-24 bg-slate-50">
+        <section class="py-20 md:py-28 bg-slate-50">
             <div class="max-w-6xl mx-auto px-5">
-                <div class="animate-on-scroll">
-                    <div class="mb-8 md:mb-10 relative">
-                        <div class="absolute -top-4 -left-4 md:-top-7 md:-left-7 pointer-events-none text-blue-500/20">
-                            <i data-lucide="sparkles" class="w-14 h-14 md:w-24 md:h-24"></i>
-                        </div>
-                        <div class="relative z-10 inline-flex items-center">
-                            <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
-                                使命和愿景
-                                <span
-                                    class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-2xl font-normal text-gray-400">Mission
-                                    &amp; Vision</span>
-                            </h2>
-                        </div>
+                <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
+                        <i data-lucide="target" class="w-3.5 h-3.5"></i>
+                        <span>初心与远方</span>
                     </div>
-                    <div class="relative w-full mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg group">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80"
-                            alt="用科技节约您的每一分钟"
-                            class="w-full h-80 md:h-96 object-cover block transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40">
-                            <p
-                                class="text-2xl md:text-4xl lg:text-5xl font-bold text-white tracking-wider text-center px-4 drop-shadow-md">
-                                "用科技节约您的每一分钟"
-                            </p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 max-w-4xl mx-auto text-center text-base md:text-lg leading-relaxed">
-                        我们致力于通过科技创新，提升用户在学习、工作、生活中获取信息的效率，让技术更好地服务于每一个人。
+                    <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+                        使命与愿景
+                    </h2>
+                    <p class="text-sm md:text-base text-slate-500 mt-3">
+                        技术是为了让人类更自由，用最真诚的产品践行科技普惠
                     </p>
                 </div>
+
+                <div class="relative rounded-2xl overflow-hidden shadow-xl mb-12 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80"
+                        alt="用科技节约您的每一分钟"
+                        class="w-full h-72 md:h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent flex flex-col justify-end p-8 md:p-14">
+                        <div class="text-blue-400 text-xs md:text-sm font-semibold tracking-wider uppercase mb-2">OUR CORE MISSION</div>
+                        <p class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-wide leading-tight drop-shadow-md">
+                            “用科技节约您的每一分钟”
+                        </p>
+                        <p class="text-slate-300 text-sm md:text-lg mt-3 max-w-2xl">
+                            通过科技创新提升开发者在学习、求职、工作与信息获取中的综合效能，让技术力量真正赋能每一个奋斗者。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 md:p-8 rounded-xl border border-slate-200/80 shadow-sm animate-on-scroll delay-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <i data-lucide="book-open-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">教育普惠与透明化</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            打破传统编程教育的高昂壁垒与过度包装，提供通俗易懂、系统连贯的路线指引与真实的工业级项目实战。
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 md:p-8 rounded-xl border border-slate-200/80 shadow-sm animate-on-scroll delay-200 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">深度拥抱 AI 原生</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            全线产品拥抱大语言模型与智能 Agent，打造 24 小时 AI 模拟面试导师与智能学习助手，实现真正的因材施教。
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 md:p-8 rounded-xl border border-slate-200/80 shadow-sm animate-on-scroll delay-300 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">始终真诚与务实</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            坚持 0 虚标、0 夸大宣传，用最严谨的代码工程质量说话，做广受计算机学子与开发者信赖的技术灯塔。
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ==========================================================
-        发展历程
+        发展历程（组件化时间轴）
         ========================================================== -->
-        <section class="py-16 md:py-20 bg-white">
+        <section class="py-20 md:py-28 bg-white">
             <div class="max-w-6xl mx-auto px-5">
-                <div class="animate-on-scroll">
-                    <div class="mb-8 md:mb-10 relative">
-                        <div class="absolute -top-4 -left-4 md:-top-7 md:-left-7 pointer-events-none text-blue-500/20">
-                            <i data-lucide="sparkles" class="w-14 h-14 md:w-24 md:h-24"></i>
-                        </div>
-                        <div class="relative z-10 inline-flex items-center">
-                            <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
-                                发展历程
-                                <span
-                                    class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-2xl font-normal text-gray-400">Milestones</span>
-                            </h2>
-                        </div>
+                <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
+                        <i data-lucide="milestone" class="w-3.5 h-3.5"></i>
+                        <span>演进之路</span>
                     </div>
+                    <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+                        发展历程
+                    </h2>
+                    <p class="text-sm md:text-base text-slate-500 mt-3">
+                        步履不停，从一人极客发起到如今多元产品生态
+                    </p>
                 </div>
-                <div class="mt-8 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"
-                        alt="发展历程" class="w-full h-64 md:h-96 rounded-xl shadow-md object-cover" loading="lazy">
+
+                <div class="relative border-l-2 border-blue-100 ml-4 md:ml-32 space-y-12 animate-on-scroll">
+                    <!-- 2023 初探星河 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-blue-100 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                            <span class="text-sm font-bold text-blue-600 uppercase tracking-wider">2023 年初 · 破浪启航</span>
+                            <span class="text-xs text-slate-400">创立元年</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            鱼皮创立【编程导航】，开启极客学习新纪元
+                        </h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-3xl">
+                            立足于解决计算机专业学习路线迷茫与实战项目匮乏痛点，上线一站式编程学习社区。凭借扎实的工业级项目教程与热诚的社群互动，首批吸引数万名学员加入。
+                        </p>
+                    </div>
+
+                    <!-- 2023 下半年 矩阵拓展 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-blue-100 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                            <span class="text-sm font-bold text-blue-600 uppercase tracking-wider">2023 年下半年 · 工具矩阵成型</span>
+                            <span class="text-xs text-slate-400">高频工具破圈</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            推出【面试鸭】与【老鱼简历】，全方位赋能求职通道
+                        </h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-3xl">
+                            深入求职痛点，研发上线“面试鸭”刷题平台与“老鱼简历”智能生成工具。形成从“日常技能修炼 ➔ 简历包装打磨 ➔ 面试真题冲刺”的完整求职支持链条。
+                        </p>
+                    </div>
+
+                    <!-- 2024 AI 纵深赋能 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-blue-100 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                            <span class="text-sm font-bold text-blue-600 uppercase tracking-wider">2024 年 · AI 智能化全面升级</span>
+                            <span class="text-xs text-slate-400">突破 200W+ 开发者</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            研发【面多多】AI 模拟面试，全网开发者关注突破 200 万
+                        </h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-3xl">
+                            全面拥抱大语言模型与智能 Agent，推出“面多多”全天候模拟面试系统，并上线“AI 导航”。公司全网粉丝量与读者突破 200 万大关，成为国内最具影响力的技术成长品牌之一。
+                        </p>
+                    </div>
+
+                    <!-- 2025+ 生态闭环 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-indigo-600 ring-4 ring-indigo-100 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                            <span class="text-sm font-bold text-indigo-600 uppercase tracking-wider">2025 &amp; 未来 · 产业级跃升与生态共建</span>
+                            <span class="text-xs text-slate-400">深化企服与产学研</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                            拓展企业 AI 内训、产教融合与极客开源生态
+                        </h3>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-3xl">
+                            与头部高校、大厂企业级云平台开展深度内训与技术合作，持续输出前沿实战架构课程，致力于打造国内首屈一指的数字化极客成长加速器。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- ==========================================================
-        创始人
+        创始人（极客架构师名片）
         ========================================================== -->
-        <section class="py-16 md:py-20 bg-slate-50">
+        <section class="py-20 md:py-28 bg-slate-50">
             <div class="max-w-6xl mx-auto px-5">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="animate-on-scroll">
-                        <div class="mb-8 md:mb-10 relative">
-                            <div
-                                class="absolute -top-4 -left-4 md:-top-7 md:-left-7 pointer-events-none text-blue-500/20">
-                                <i data-lucide="sparkles" class="w-14 h-14 md:w-24 md:h-24"></i>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 animate-on-scroll">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
+                            <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+                            <span>创始人</span>
+                        </div>
+                        <div class="flex items-baseline gap-3 mb-4">
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">鱼皮</h2>
+                            <span class="text-base text-slate-500 font-medium">鱼鸢网络创始人 &amp; CEO</span>
+                        </div>
+                        <p class="text-slate-600 text-base leading-relaxed mb-6">
+                            原腾讯全栈工程师，腾讯云开发高级布道师，GitHub 中国区 Top 10 开源创作者，全网关注超 200 万的技术自媒体博主与畅销书作者。秉承极客初心，长期坚持输出通俗易懂的优质技术内容与架构实战。
+                        </p>
+
+                        <!-- 数据徽章 -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                            <div class="p-3 bg-white rounded-xl border border-slate-200/80 text-center shadow-sm">
+                                <div class="text-xl font-bold text-blue-600">200W+</div>
+                                <div class="text-xs text-slate-500 mt-0.5">全网关注者</div>
                             </div>
-                            <div class="relative z-10 inline-flex items-center">
-                                <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
-                                    创始人
-                                    <span
-                                        class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-2xl font-normal text-gray-400">Founder</span>
-                                </h2>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200/80 text-center shadow-sm">
+                                <div class="text-xl font-bold text-slate-900">Top 10</div>
+                                <div class="text-xs text-slate-500 mt-0.5">GitHub 中国区</div>
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200/80 text-center shadow-sm">
+                                <div class="text-xl font-bold text-slate-900">1000+</div>
+                                <div class="text-xs text-slate-500 mt-0.5">万字原创沉淀</div>
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-slate-200/80 text-center shadow-sm">
+                                <div class="text-xl font-bold text-blue-600">50W+</div>
+                                <div class="text-xs text-slate-500 mt-0.5">平台受益学员</div>
                             </div>
                         </div>
-                        <div class="mt-4 md:mt-6 flex items-center gap-2">
-                            <p class="text-xl md:text-2xl font-bold text-gray-800">鱼皮</p>
-                            <p class="text-sm md:text-lg font-normal text-gray-600">鱼鸢网络创始人 &amp; CEO</p>
+
+                        <!-- 专长标签 -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-200/60 text-slate-700">Java / Spring 企业级架构</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-200/60 text-slate-700">AI 大模型与智能体开发</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-200/60 text-slate-700">前端全栈生态</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-200/60 text-slate-700">技术出版与布道</span>
                         </div>
-                        <ul class="space-y-3 mt-4">
-                            <li class="flex items-start text-gray-600 text-base">
-                                <span class="text-blue-600 mr-2 font-bold">·</span> 前腾讯全栈工程师，腾讯云开发高级布道师
-                            </li>
-                            <li class="flex items-start text-gray-600 text-base">
-                                <span class="text-blue-600 mr-2 font-bold">·</span> 几十万用户编程学习平台【编程导航】和【面试鸭】创始人
-                            </li>
-                            <li class="flex items-start text-gray-600 text-base">
-                                <span class="text-blue-600 mr-2 font-bold">·</span> 热爱分享，善于把 Java 后端、前端、项目讲得通俗易懂
-                            </li>
-                            <li class="flex items-start text-gray-600 text-base">
-                                <span class="text-blue-600 mr-2 font-bold">·</span> GitHub 中国区前 10，全网 200 万+ 粉编程 &amp;
-                                AI 博主
-                            </li>
-                            <li class="flex items-start text-gray-600 text-base">
-                                <span class="text-blue-600 mr-2 font-bold">·</span> 持续写作，累积创作近千万字，出版区块链、项目实战书籍
-                            </li>
-                        </ul>
+
+                        <!-- 社交与联系 -->
+                        <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-200">
+                            <a href="https://space.bilibili.com/12890453/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors">
+                                <i data-lucide="tv" class="w-4 h-4"></i>
+                                <span>B 站 (程序员鱼皮)</span>
+                            </a>
+                            <a href="https://github.com/liyupi" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:yupi@yuyuanweb.com"
+                                class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                                <span>yupi@yuyuanweb.com</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="animate-on-scroll delay-200">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-                            alt="鱼皮" class="w-full max-w-sm h-auto mx-auto rounded-xl shadow-lg object-cover"
-                            loading="lazy">
+                    <div class="lg:col-span-5 animate-on-scroll delay-200">
+                        <div class="relative max-w-sm mx-auto">
+                            <div class="overflow-hidden rounded-2xl shadow-xl border border-slate-200/80 bg-white p-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                                    alt="鱼皮" class="w-full h-auto rounded-xl object-cover" loading="lazy">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -374,120 +525,153 @@
         <!-- ==========================================================
         企业文化
         ========================================================== -->
-        <section class="py-16 md:py-20 bg-white">
+        <section class="py-20 md:py-28 bg-white">
             <div class="max-w-6xl mx-auto px-5">
-                <div class="animate-on-scroll">
-                    <div class="mb-8 md:mb-10 relative">
-                        <div class="absolute -top-4 -left-4 md:-top-7 md:-left-7 pointer-events-none text-blue-500/20">
-                            <i data-lucide="sparkles" class="w-14 h-14 md:w-24 md:h-24"></i>
-                        </div>
-                        <div class="relative z-10 inline-flex items-center">
-                            <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
-                                企业文化
-                                <span
-                                    class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-2xl font-normal text-gray-400">Corporate
-                                    culture</span>
-                            </h2>
-                        </div>
+                <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        <span>文化价值观</span>
                     </div>
+                    <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+                        企业文化与准则
+                    </h2>
+                    <p class="text-sm md:text-base text-slate-500 mt-3">
+                        做真诚的产品，做受人尊重的工程师，追求卓越效能
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                    <div
-                        class="rounded-xl p-6 text-center animate-on-scroll delay-100 bg-slate-50 border border-gray-100 hover:shadow-md transition-shadow">
-                        <div
-                            class="w-16 h-16 mx-auto mb-4 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
-                            <i data-lucide="zap" class="w-8 h-8"></i>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="rounded-xl p-6 bg-slate-50 border border-slate-200/60 hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll delay-100">
+                        <div class="w-12 h-12 mb-4 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-base font-semibold text-gray-800 mb-2">追求高效</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">尽量减少重复工作，利用效率工具、知识沉淀、软件开发等方法来提高工作效率。</p>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">追求高效</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">减少低水平重复劳动，通过开发工具、自动化脚本与结构化沉淀，把时间留给创造性思考。</p>
                     </div>
-                    <div
-                        class="rounded-xl p-6 text-center animate-on-scroll delay-200 bg-slate-50 border border-gray-100 hover:shadow-md transition-shadow">
-                        <div
-                            class="w-16 h-16 mx-auto mb-4 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
-                            <i data-lucide="bar-chart-3" class="w-8 h-8"></i>
+
+                    <div class="rounded-xl p-6 bg-slate-50 border border-slate-200/60 hover:border-indigo-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll delay-200">
+                        <div class="w-12 h-12 mb-4 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-base font-semibold text-gray-800 mb-2">数据驱动</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            在进行任何工作、判断和决策时，避免主观推断，而是尽量用科学的方法、明确的事实数据来客观分析结果，争取改进。</p>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">数据驱动</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">避免拍脑袋与盲目主观推断，以科学的指标跟踪与客观真实的数据反馈作为决策核心依据。</p>
                     </div>
-                    <div
-                        class="rounded-xl p-6 text-center animate-on-scroll delay-300 bg-slate-50 border border-gray-100 hover:shadow-md transition-shadow">
-                        <div
-                            class="w-16 h-16 mx-auto mb-4 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
-                            <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+
+                    <div class="rounded-xl p-6 bg-slate-50 border border-slate-200/60 hover:border-emerald-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll delay-300">
+                        <div class="w-12 h-12 mb-4 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-base font-semibold text-gray-800 mb-2">用户至上</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">多听用户的声音、时刻接受用户的反馈，避免自嗨。用户是上帝，要时刻保持对用户的真诚，做到 0
-                            投诉、0 黑料！</p>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">用户至上</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">倾听每一位开发者的真实反馈，拒绝自嗨式功能堆砌，以敬畏之心维护口碑与纯粹的技术生态。</p>
                     </div>
-                    <div
-                        class="rounded-xl p-6 text-center animate-on-scroll delay-400 bg-slate-50 border border-gray-100 hover:shadow-md transition-shadow">
-                        <div
-                            class="w-16 h-16 mx-auto mb-4 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
-                            <i data-lucide="globe" class="w-8 h-8"></i>
+
+                    <div class="rounded-xl p-6 bg-slate-50 border border-slate-200/60 hover:border-purple-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll delay-400">
+                        <div class="w-12 h-12 mb-4 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-base font-semibold text-gray-800 mb-2">开放包容</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            因为任何一个想法或建议都可能产生很大的价值，所以我们尊重个人想法、鼓励大胆表达，并且由大家一起积极讨论。</p>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">开放包容</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">每一个微小的想法都可能撬动巨大价值，鼓励坦诚交流与大胆创新，打破信息壁垒与层级束缚。</p>
                     </div>
-                    <div
-                        class="rounded-xl p-6 text-center animate-on-scroll delay-500 bg-slate-50 border border-gray-100 hover:shadow-md transition-shadow">
-                        <div
-                            class="w-16 h-16 mx-auto mb-4 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
-                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+
+                    <div class="rounded-xl p-6 bg-slate-50 border border-slate-200/60 hover:border-amber-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll delay-500">
+                        <div class="w-12 h-12 mb-4 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-base font-semibold text-gray-800 mb-2">主人意识</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            每个人要有独立负责事项的精神和意识，能够自主推动事情的发展，有任何困难即时记录和反馈，力求解决和突破。</p>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">主人意识</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">独立端到端负责业务闭环，主动识别问题、定位瓶颈、快速破局，以创业者姿态共同成长。</p>
                     </div>
-                    <div
-                        class="rounded-xl p-6 text-center animate-on-scroll delay-500 bg-slate-50 border border-gray-100 hover:shadow-md transition-shadow">
-                        <div
-                            class="w-16 h-16 mx-auto mb-4 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
-                            <i data-lucide="trending-up" class="w-8 h-8"></i>
+
+                    <div class="rounded-xl p-6 bg-slate-50 border border-slate-200/60 hover:border-sky-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll delay-500">
+                        <div class="w-12 h-12 mb-4 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-base font-semibold text-gray-800 mb-2">始终前进</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">保持敏锐，持续关注资讯热点、前沿信息和社会动态，始终走在时代的最前列，保证自己始终不断进步。
-                        </p>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">始终前进</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">对 AI 与最新技术浪潮保持极高敏锐度，不设自我舒适区，以终身学习驱动技术与认知演进。</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ==========================================================
-        合作伙伴
+        合作伙伴与生态
         ========================================================== -->
-        <section class="py-16 md:py-20 bg-slate-50">
+        <section class="py-20 md:py-28 bg-slate-50">
             <div class="max-w-6xl mx-auto px-5">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="animate-on-scroll">
-                        <div class="mb-8 md:mb-10 relative">
-                            <div
-                                class="absolute -top-4 -left-4 md:-top-7 md:-left-7 pointer-events-none text-blue-500/20">
-                                <i data-lucide="sparkles" class="w-14 h-14 md:w-24 md:h-24"></i>
-                            </div>
-                            <div class="relative z-10 inline-flex items-center">
-                                <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
-                                    合作伙伴
-                                    <span
-                                        class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-2xl font-normal text-gray-400">Partners</span>
-                                </h2>
-                            </div>
+                <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
+                        <i data-lucide="handshake" class="w-3.5 h-3.5"></i>
+                        <span>生态共建</span>
+                    </div>
+                    <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+                        生态与合作伙伴
+                    </h2>
+                    <p class="text-sm md:text-base text-slate-500 mt-3">
+                        携手全球知名科技巨头、开源阵营与高校实验室，共创繁荣开发者社区
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-on-scroll">
+                    <div class="p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <i data-lucide="badge-check" class="w-6 h-6"></i>
                         </div>
-                        <p class="text-gray-600 mb-4 text-base">我们的合作伙伴包括：</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="text-gray-600 text-base">1）50 多名编程、科技、知识领域的自媒体博主 / 技术专家</li>
-                            <li class="text-gray-600 text-base">2）微软官方认证的合作伙伴</li>
-                            <li class="text-gray-600 text-base">3）CodeGeex 合作伙伴</li>
-                            <li class="text-gray-600 text-base">4）科大讯飞、Api Fox 等知名公司和产品</li>
-                        </ul>
-                        <p class="text-gray-600 text-base">欢迎联系我们商务合作，邮箱：yupi@yuyuanweb.com</p>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">微软认证合作伙伴</h3>
+                        <div class="text-xs text-blue-600 font-medium mb-2">Microsoft Partner Network</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            深度对接微软云与开发者工具生态，共建高品质技术学习资源。
+                        </p>
                     </div>
-                    <div class="animate-on-scroll delay-200">
-                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80"
-                            alt="合作伙伴" class="w-full rounded-xl shadow-md object-cover" loading="lazy">
+
+                    <div class="p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">头部 AI 战略生态</h3>
+                        <div class="text-xs text-indigo-600 font-medium mb-2">智谱 AI / CodeGeex 伙伴</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            大模型原生产品共创，推动代码生成与 AI 智能体在教育场景落地。
+                        </p>
                     </div>
+
+                    <div class="p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">知名产品与科技企业</h3>
+                        <div class="text-xs text-emerald-600 font-medium mb-2">科大讯飞 / Apifox / 腾讯云</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            联合开展开发者技术沙龙、接口规范落地与技术内训实训营。
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-purple-300 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-1">技术博主 &amp; 高校联盟</h3>
+                        <div class="text-xs text-purple-600 font-medium mb-2">50+ 科技博主 / 高校导师</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            汇聚计算机领域优质讲师，为十万计算机学子提供精准内推与规划。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 商务合作 CTA -->
+                <div class="mt-12 bg-white rounded-2xl border border-slate-200/80 p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 animate-on-scroll">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="mail-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900">期待与您的品牌携手共赢</h4>
+                            <p class="text-sm text-slate-500">支持技术研讨、赞助合作、高校实训、企业内训等多种商务模式</p>
+                        </div>
+                    </div>
+                    <a href="mailto:yupi@yuyuanweb.com"
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all duration-200 shadow-sm shadow-blue-500/20 shrink-0">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>联系商务合作：yupi@yuyuanweb.com</span>
+                    </a>
                 </div>
             </div>
         </section>

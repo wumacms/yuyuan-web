@@ -120,67 +120,75 @@
   <!-- ============================================================
     HEADER
     ============================================================ -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 shadow-md" id="header">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-slate-200/80 shadow-sm" id="header">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="flex items-center shrink-0 gap-2.5 pl-2 md:pl-4">
+        <a href="index.html" class="flex items-center shrink-0 gap-3 pl-2 md:pl-4">
           <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=120&q=80"
-            alt="鱼鸢网络" class="h-10 w-10 md:h-12 md:w-12 rounded-xl object-cover shadow-sm">
-          <span class="text-xl md:text-2xl font-bold tracking-tight text-slate-900">鱼鸢网络</span>
+            alt="鱼鸢网络" class="h-10 w-10 md:h-11 md:w-11 rounded-xl object-cover ring-2 ring-blue-500/20 shadow-sm">
+          <div class="flex flex-col">
+            <span class="text-xl md:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">鱼鸢网络</span>
+            <span class="text-xs text-slate-400 font-medium tracking-wider mt-0.5">YUYUAN NETWORK</span>
+          </div>
         </a>
         <nav class="hidden md:flex items-center">
-          <ul class="flex items-center h-11">
-            <li class="h-full">
+          <ul class="flex items-center gap-1">
+            <li>
               <a href="index.html"
-                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-slate-900 border-transparent">
+                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-blue-600 hover:bg-slate-50">
                 首页
               </a>
             </li>
-            <li class="h-full">
+            <li>
               <a href="about.html"
-                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-slate-900 border-transparent">
+                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-blue-600 hover:bg-slate-50">
                 关于我们
               </a>
             </li>
-            <li class="h-full">
+            <li>
               <a href="products.html"
-                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-blue-600 border-blue-600">
+                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-blue-600 bg-blue-50/80">
                 产品服务
               </a>
             </li>
-            <li class="h-full">
+            <li>
               <a href="join.html"
-                class="flex items-center justify-center w-28 h-full text-center mx-2 md:mx-4 lg:mx-8 text-base font-bold transition-all duration-300 border-b-2 hover:text-blue-600 hover:border-blue-600 text-slate-900 border-transparent">
+                class="px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-blue-600 hover:bg-slate-50">
                 加入我们
               </a>
             </li>
           </ul>
         </nav>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm shadow-blue-500/20">
+            <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+            <span>进入编程导航</span>
+          </a>
+        </div>
         <button class="md:hidden ml-auto p-2 text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn"
           aria-label="打开菜单">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
     </div>
-    <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
-      <nav class="container mx-auto px-5 py-4 space-y-4">
-        <a href="index.html"
-          class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-slate-900">
-          首页
-        </a>
-        <a href="about.html"
-          class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-slate-900">
-          关于我们
-        </a>
-        <a href="products.html"
-          class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-blue-600">
-          产品服务
-        </a>
-        <a href="join.html"
-          class="block text-base font-bold transition-colors duration-300 hover:text-blue-600 text-slate-900">
-          加入我们
-        </a>
-      </nav>
+    <div class="md:hidden hidden bg-white border-t border-slate-200 px-5 py-4 space-y-2" id="mobile-menu">
+      <a href="index.html"
+        class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50">
+        首页
+      </a>
+      <a href="about.html"
+        class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50">
+        关于我们
+      </a>
+      <a href="products.html"
+        class="block px-3 py-2 rounded-lg text-sm font-semibold text-blue-600 bg-blue-50">
+        产品服务
+      </a>
+      <a href="join.html"
+        class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50">
+        加入我们
+      </a>
     </div>
   </header>
 
@@ -192,7 +200,7 @@
     });
     const header = document.getElementById('header');
     window.addEventListener('scroll', function () {
-      window.scrollY > 100 ? header?.classList.add('shadow-md') : header?.classList.remove('shadow-md');
+      window.scrollY > 50 ? header?.classList.add('shadow-md') : header?.classList.remove('shadow-md');
     });
   </script>
 
@@ -204,242 +212,496 @@
     <!-- ==========================================================
         PAGE BANNER
         ========================================================== -->
-    <section class="relative overflow-hidden bg-neutral-900 h-72 md:h-96">
+    <section class="relative overflow-hidden bg-slate-950 py-20 md:py-28">
       <div class="absolute inset-0">
         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=80"
-          alt="产品服务" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-neutral-950/40"></div>
+          alt="产品服务" class="w-full h-full object-cover opacity-50 md:opacity-65">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/70"></div>
       </div>
-      <div class="relative max-w-6xl mx-auto px-5 h-full flex items-center">
-        <div class="text-white">
-          <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-2 drop-shadow-md">产品服务</h1>
-          <p class="text-sm md:text-lg text-gray-200 drop-shadow">全方位赋能编程学习与技术成长</p>
+      <div class="relative max-w-6xl mx-auto px-5">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>全栈矩阵 · 创新赋能</span>
+          </div>
+          <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            全周期赋能<br>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">编程学习与技术成长</span>
+          </h1>
+          <p class="text-base md:text-xl text-slate-300 leading-relaxed max-w-2xl font-light">
+            从系统化路线引导、工业级项目实战，到 AI 智能面试辅导与职场效率工具，覆盖开发者进阶全周期。
+          </p>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================
-        产品列表（业务领域/产品服务）
+        产品分类与列表
         ========================================================== -->
-    <section class="py-16 md:py-20 bg-white">
+    <section class="py-20 md:py-28 bg-white">
       <div class="max-w-6xl mx-auto px-5">
 
-        <!-- 标题 -->
-        <div class="animate-on-scroll">
-          <div class="mb-8 md:mb-10 relative">
-            <div class="absolute -top-4 -left-4 md:-top-7 md:-left-7 pointer-events-none text-blue-500/20">
-              <i data-lucide="sparkles" class="w-14 h-14 md:w-24 md:h-24"></i>
+        <!-- 标题与分类 Tab -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 animate-on-scroll">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-3">
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+              <span>自研产品矩阵</span>
             </div>
-            <div class="relative z-10 inline-flex items-center">
-              <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-800">
-                业务领域
-                <span class="ml-1.5 md:ml-2 text-sm md:text-lg lg:text-2xl font-normal text-gray-400">Business</span>
-              </h2>
-            </div>
+            <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+              业务领域与产品
+            </h2>
+          </div>
+
+          <!-- 分类筛选按钮 -->
+          <div class="flex flex-wrap items-center gap-2" id="filter-tabs">
+            <button data-filter="all" class="filter-tab active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-sm shadow-blue-500/20">
+              全部产品
+            </button>
+            <button data-filter="learn" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+              学习成长
+            </button>
+            <button data-filter="career" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+              求职冲刺
+            </button>
+            <button data-filter="ai" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+              AI 智能与效率
+            </button>
+            <button data-filter="enterprise" class="filter-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+              企业级服务
+            </button>
           </div>
         </div>
 
         <!-- 产品卡片网格 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
 
           <!-- 1. 编程导航 -->
-          <div class="animate-on-scroll delay-100">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
-                    alt="一站式编程学习网站，数十万编程爱好者的选择"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="learn">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                  alt="编程导航" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  核心旗舰 · 数十万学员
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">编程导航</h3>
-                <p class="text-sm text-gray-400 mb-2">一站式编程学习网站，数十万编程爱好者的选择</p>
-                <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">编程导航</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  一站式系统化编程学习交流平台。提供从零基础到大厂进阶路线、工业级独家实战项目专栏与名师答疑。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-blue-50 text-blue-600">系统路线</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-blue-50 text-blue-600">企业实战</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-blue-50 text-blue-600">答疑社群</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>进入编程导航</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
-          <!-- 2. 老鱼简历 -->
-          <div class="animate-on-scroll delay-200">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://laoyujianli.com/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80"
-                    alt="1 分钟生成精美的个人简历，求职必备"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <!-- 2. 面试鸭 -->
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="career">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                  alt="面试鸭" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  求职利器 · 1万+真题
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">老鱼简历</h3>
-                <p class="text-sm text-gray-400 mb-2">1 分钟生成精美的个人简历，求职必备</p>
-                <a href="https://laoyujianli.com/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">面试鸭</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  程序员专业刷题面试冲刺神器。包含各大厂真题题库、高频考点脑图、深度解析与刷题打卡助手。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-indigo-50 text-indigo-600">真题题库</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-indigo-50 text-indigo-600">刷题路线</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-indigo-50 text-indigo-600">考点解析</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://www.mianshiya.com/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>开始刷题</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
-          <!-- 3. 面试鸭 -->
-          <div class="animate-on-scroll delay-300">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://www.mianshiya.com/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
-                    alt="1万+高频面试真题，帮你拿 offer"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <!-- 3. 面多多 -->
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="career ai">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+                  alt="面多多" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  AI 模拟面试官
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">面试鸭</h3>
-                <p class="text-sm text-gray-400 mb-2">1万+高频面试真题，帮你拿 offer</p>
-                <a href="https://www.mianshiya.com/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">面多多</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  基于大模型的 24 小时一对一 AI 模拟面试导师。还原真实大厂面试追问体验，生成详尽评估诊断报告。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-purple-50 text-purple-600">智能追问</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-purple-50 text-purple-600">全天候</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-purple-50 text-purple-600">诊断报告</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://ai.mianshiya.com/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>体验 AI 模拟面试</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
-          <!-- 4. 面多多 -->
-          <div class="animate-on-scroll delay-400">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://ai.mianshiya.com/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
-                    alt="1 对 1 模拟面试，24 小时随时开启面试提升"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <!-- 4. 老鱼简历 -->
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="career">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80"
+                  alt="老鱼简历" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  1分钟极速生成
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">面多多</h3>
-                <p class="text-sm text-gray-400 mb-2">1 对 1 模拟面试，24 小时随时开启面试提升</p>
-                <a href="https://ai.mianshiya.com/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">老鱼简历</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  专为程序员定制的高颜值在线简历制作平台。丰富专业模板、一键排版、Markdown 实时渲染与 PDF 极速导出。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-emerald-50 text-emerald-600">极客模板</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-emerald-50 text-emerald-600">Markdown</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-emerald-50 text-emerald-600">PDF导出</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://laoyujianli.com/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>制作个人简历</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
           <!-- 5. AI 导航 -->
-          <div class="animate-on-scroll delay-500">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://ai.codefather.cn/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
-                    alt="AI 资源大全，你想要的关于 AI 的一切都在这里"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="ai">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
+                  alt="AI 导航" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-sky-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  前沿 AI 资源库
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">AI 导航</h3>
-                <p class="text-sm text-gray-400 mb-2">AI 资源大全，你想要的关于 AI 的一切都在这里</p>
-                <a href="https://ai.codefather.cn/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">AI 导航</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  全网优质 AI 工具与资源综合索引平台。精选大模型、提示词工程、AI 编程插件与生成式设计神器。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-sky-50 text-sky-600">工具精选</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-sky-50 text-sky-600">大模型分类</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-sky-50 text-sky-600">前沿资讯</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://ai.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>探索 AI 导航</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
           <!-- 6. 算法导航 -->
-          <div class="animate-on-scroll delay-500">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://algo.codefather.cn/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80"
-                    alt="动画学算法，保姆级算法学习路线"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="learn">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80"
+                  alt="算法导航" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  动画学算法
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">算法导航</h3>
-                <p class="text-sm text-gray-400 mb-2">动画学算法，保姆级算法学习路线</p>
-                <a href="https://algo.codefather.cn/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">算法导航</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  保姆级算法学习路线与图解动画平台。收录力扣高频精选题解，用动效拆解数据结构与算法底层思想。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-amber-50 text-amber-600">图解动效</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-amber-50 text-amber-600">力扣高频</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-amber-50 text-amber-600">数据结构</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://algo.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>动画学算法</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
           <!-- 7. 剪切助手 -->
-          <div class="animate-on-scroll delay-500">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://jianqiezhushou.com/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
-                    alt="轻松管理文本复制粘贴，提高工作效率的神器"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="ai">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
+                  alt="剪切助手" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-teal-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  桌面效率神器
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">剪切助手</h3>
-                <p class="text-sm text-gray-400 mb-2">轻松管理文本复制粘贴，提高工作效率的神器</p>
-                <a href="https://jianqiezhushou.com/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">剪切助手</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  轻量级多端文本与剪贴板高效管理软件。告别频繁复制粘贴丢失历史，内置常用代码片段快速插入。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-teal-50 text-teal-600">历史记忆</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-teal-50 text-teal-600">代码片段</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-teal-50 text-teal-600">轻巧快速</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://jianqiezhushou.com/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>下载体验</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
           <!-- 8. 企业 AI 服务 -->
-          <div class="animate-on-scroll delay-500">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://work.weixin.qq.com/kfid/kfc2ebf2f54cd0656e6" target="_blank" rel="noopener noreferrer"
-                class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
-                    alt="企业 AI 内训、落地咨询与技术分享，把 AI 真正用起来"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="enterprise">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+                  alt="企业 AI 服务" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-rose-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  定制企业级方案
                 </div>
-              </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">企业 AI 服务</h3>
-                <p class="text-sm text-gray-400 mb-2">企业 AI 内训、落地咨询与技术分享，把 AI 真正用起来</p>
-                <a href="https://work.weixin.qq.com/kfid/kfc2ebf2f54cd0656e6" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
               </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">企业 AI 服务</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  企业级 AI 内训、降本增效解决方案与私有化落地方案。帮助研发与业务团队把生成式 AI 真正转化为生产力。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-rose-50 text-rose-600">企业内训</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-rose-50 text-rose-600">私有落地</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-rose-50 text-rose-600">效能提升</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://work.weixin.qq.com/kfid/kfc2ebf2f54cd0656e6" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>咨询企服顾问</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
           <!-- 9. AI & 编程自媒体 -->
-          <div class="animate-on-scroll delay-500">
-            <div
-              class="group rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-              <a href="https://space.bilibili.com/12890453/" target="_blank" rel="noopener noreferrer" class="block">
-                <div class="aspect-video overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
-                    alt="AI 和编程干货分享，全网关注超 200 万"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy">
+          <div class="product-item group bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between" data-category="learn">
+            <div>
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
+                  alt="AI & 编程自媒体" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  全网关注超 200 万
                 </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">AI &amp; 编程自媒体</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  程序员鱼皮主理，持续输出通俗幽默的架构教程、大模型玩法、求职面经与职场经验，陪伴开发者共同成长。
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded text-xs bg-red-50 text-red-600">干货专栏</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-red-50 text-red-600">B站百大</span>
+                  <span class="px-2 py-0.5 rounded text-xs bg-red-50 text-red-600">百万社区</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="https://space.bilibili.com/12890453/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 group-hover:bg-blue-600 text-white text-sm font-semibold transition-colors duration-200">
+                <span>关注 B 站主页</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
               </a>
-              <div class="py-4 text-center bg-slate-50">
-                <h3 class="text-base font-medium text-blue-600 mb-1">AI &amp; 编程自媒体</h3>
-                <p class="text-sm text-gray-400 mb-2">AI 和编程干货分享，全网关注超 200 万</p>
-                <a href="https://space.bilibili.com/12890453/" target="_blank" rel="noopener noreferrer"
-                  class="inline-block text-sm text-blue-600 hover:underline">查看详情</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 筛选逻辑脚本 -->
+    <script>
+      const tabs = document.querySelectorAll('.filter-tab');
+      const items = document.querySelectorAll('.product-item');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('bg-blue-600', 'text-white', 'shadow-sm', 'shadow-blue-500/20');
+            t.classList.add('bg-slate-100', 'text-slate-600');
+          });
+          tab.classList.add('bg-blue-600', 'text-white', 'shadow-sm', 'shadow-blue-500/20');
+          tab.classList.remove('bg-slate-100', 'text-slate-600');
+
+          const filter = tab.getAttribute('data-filter');
+          items.forEach(item => {
+            const cat = item.getAttribute('data-category');
+            if (filter === 'all' || cat.includes(filter)) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- ==========================================================
+        学员与用户真实口碑
+        ========================================================== -->
+    <section class="py-20 md:py-28 bg-slate-50 border-t border-slate-200/60">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 mb-4">
+            <i data-lucide="message-square-quote" class="w-3.5 h-3.5"></i>
+            <span>口碑见证</span>
+          </div>
+          <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+            用真实成果，赢得开发者与大厂信赖
+          </h2>
+          <p class="text-sm md:text-base text-slate-500 mt-3">
+            数百位学员通过平台项目实战与面试冲刺，斩获头部互联网与名企 Offer
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 animate-on-scroll">
+          <div class="p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-amber-400 mb-3">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                “跟着鱼皮在【编程导航】做完两个完整的企业级实战项目后，面试官问到的分布式与限流痛点全部都在专栏里踩过坑，秋招顺利拿到腾讯后端 SP Offer！”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-sm">
+                张同学
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">张同学 · 2024届毕业生</div>
+                <div class="text-xs text-blue-600 font-medium">现就职于：腾讯微信事业群</div>
               </div>
             </div>
           </div>
 
+          <div class="p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-amber-400 mb-3">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                “【面试鸭】的真题脑图和【面多多】AI 模拟面试太赞了！高频真题非常命中考点，AI 导师给的追问建议帮我补齐了底层短板，成功拿到字节前端 Offer！”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center text-sm">
+                李同学
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">李同学 · 计算机硕士</div>
+                <div class="text-xs text-indigo-600 font-medium">现就职于：字节跳动商业化</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-amber-400 mb-3">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                “原本简历投出去石沉大海，用了【老鱼简历】重新按极客标准梳理，并按照鱼皮的实战指引重构了作品集，面试直通率大幅提升，顺利拿下美团 Offer。”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 font-bold flex items-center justify-center text-sm">
+                王同学
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">王同学 · 跨专业转码</div>
+                <div class="text-xs text-emerald-600 font-medium">现就职于：美团核心本地商业</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 转化 CTA -->
+        <div class="mt-16 bg-slate-950 rounded-3xl p-8 md:p-14 text-white relative overflow-hidden shadow-2xl animate-on-scroll">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 opacity-50"></div>
+          <div class="relative z-10 max-w-2xl">
+            <h3 class="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
+              立即开启属于你的全栈进阶之旅
+            </h3>
+            <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-8">
+              加入 200W+ 开发者选择的技术学习平台，告别路线迷茫，从今天开始积累工业级项目。
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="https://www.codefather.cn/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition-colors shadow-lg shadow-blue-500/30">
+                <i data-lucide="compass" class="w-4 h-4"></i>
+                <span>免费体验编程导航</span>
+              </a>
+              <a href="https://work.weixin.qq.com/kfid/kfc2ebf2f54cd0656e6" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-colors border border-white/20">
+                <i data-lucide="briefcase" class="w-4 h-4"></i>
+                <span>企业合作洽谈</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
